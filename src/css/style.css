@@ -32,9 +32,8 @@ div#content {
 	cursor: pointer;
 }
 
-.logo-box img:hover,
-.logo-box img:active {
-	filter: brightness(9999);
+.log-container:hover {
+	cursor: pointer;
 }
 
 .logo-box a {
@@ -45,8 +44,12 @@ div#content {
 	width: 100%;
 }
 
-.logo-box:hover {
-	filter: brightness(9999);
+.log-container:hover .logo-box a h1 {
+	color: #ffffffff;
+}
+
+.log-container:hover .logo-box img {
+	filter: brightness(3);
 }
 
 .log-container:after {
