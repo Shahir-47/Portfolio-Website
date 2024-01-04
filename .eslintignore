@@ -1,0 +1,4 @@
+node_modules/
+wepback.config.js
+test_files_jest/
+dist/
