@@ -1,11 +1,14 @@
 body {
 	color: #e0e0e0;
-	background-color: #121212;
+	background-color: #000000;
+	background-image: url(../img/7.jpg);
+	background-size: contain !important;
+	background-repeat: no-repeat !important;
 }
 
 div#content {
 	height: max(100vh, 100%); /* temporary */
-	min-height: 100vh;
+	min-height: 1000vh;
 }
 
 .nav-bar {
