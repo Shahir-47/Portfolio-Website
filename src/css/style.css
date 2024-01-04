@@ -1,0 +1,106 @@
+body {
+	color: #e0e0e0;
+	background-color: #121212;
+}
+
+div#content {
+	height: max(100vh, 100%); /* temporary */
+	min-height: 100vh;
+}
+
+.nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 2rem;
+	transition: all 0.3s ease;
+}
+
+.logo-box {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.logo-box img {
+	width: 4rem;
+	height: auto;
+	cursor: pointer;
+}
+
+.logo-box img:hover,
+.logo-box img:active {
+	filter: brightness(9999);
+}
+
+.logo-box a {
+	text-decoration: none;
+}
+
+.log-container:hover:after {
+	width: 100%;
+}
+
+.logo-box:hover {
+	filter: brightness(9999);
+}
+
+.log-container:after {
+	background: #4fd1c5;
+	border-radius: 16px;
+	bottom: 1px;
+	content: "";
+	display: block;
+	height: 5px;
+	left: 0;
+	position: relative;
+	transition: all 0.3s ease-out 0s;
+	width: 0;
+	z-index: -1;
+}
+
+.logo-box a h1 {
+	font-size: 3rem;
+	font-weight: 700;
+	cursor: pointer;
+	margin: 0;
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: #e0e0e0;
+	font-size: 1.5rem;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+.nav-links a:hover {
+	color: #ffffffff;
+}
+
+.nav-links a:hover:after {
+	width: 100%;
+}
+
+.nav-links a:after {
+	background: #4fd1c5;
+	border-radius: 16px;
+	bottom: 1px;
+	content: "";
+	display: block;
+	height: 5px;
+	left: 0;
+	position: relative;
+	transition: all 0.3s ease-out 0s;
+	width: 0;
+	z-index: -1;
+}
