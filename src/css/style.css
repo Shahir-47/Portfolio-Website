@@ -9,18 +9,21 @@ body {
 div#content {
 	height: max(100vh, 100%); /* temporary */
 	min-height: 1000vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .nav-bar {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.5rem 2rem;
+	padding: 1.5rem 3rem;
 	transition: all 0.3s ease;
+	z-index: 999;
 }
 
 .logo-box {
@@ -109,4 +112,36 @@ div#content {
 	transition: all 0.3s ease-out 0s;
 	width: 0;
 	z-index: -1;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.first-block-home {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.text-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.sub-text-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.computer {
+	width: 50%;
+	height: auto;
+}
+
+.first-text-container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
 }

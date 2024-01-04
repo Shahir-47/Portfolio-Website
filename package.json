@@ -27,5 +27,8 @@
     "style-loader": "^3.3.3",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "typed.js": "^2.1.0"
   }
 }

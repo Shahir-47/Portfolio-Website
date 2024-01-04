@@ -47,7 +47,7 @@ function createNavBar() {
 	bar.appendChild(logContainer);
 	bar.appendChild(navLinks);
 
-	const content = document.querySelector("body");
+	const content = document.querySelector("div#content");
 	content.appendChild(bar);
 }
 
