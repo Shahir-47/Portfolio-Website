@@ -133,6 +133,7 @@ div#content {
 .main-container {
 	display: flex;
 	flex-direction: column;
+	gap: 7rem;
 }
 
 .first-block-home {
@@ -259,4 +260,51 @@ div#content {
 .second-text-container h5 {
 	font-size: 2rem;
 	font-weight: 500;
+}
+
+.second-block-home {
+	display: flex;
+	flex-direction: column;
+	padding: 0 3rem;
+	margin: 0 5rem;
+}
+
+.second-block-text-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	justify-items: center;
+	align-items: center;
+}
+
+.hacker {
+	width: 35%;
+	height: auto;
+}
+
+.text-div {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.text-div h3 {
+	align-self: center;
+	font-size: 1.9rem;
+	margin: 0;
+}
+
+.highlight,
+.text-div h3 span {
+	color: #4fd1c5;
+}
+
+.sub-div {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.sub-text {
+	font-weight: 600;
+	margin: 0;
 }
