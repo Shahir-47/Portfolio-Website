@@ -191,17 +191,27 @@ function HomePage() {
 	const socialIcons = document.createElement("div");
 	socialIcons.classList.add("social-icons");
 
+	const gitLink = document.createElement("a");
+	gitLink.href = "https://github.com/Shahir-47";
+	gitLink.target = "_blank";
+	gitLink.rel = "noopener noreferrer";
 	const gitSocial = document.createElement("img");
 	gitSocial.src = GitSocial;
 	gitSocial.alt = "GitHub";
 	gitSocial.classList.add("social-icon");
-	socialIcons.appendChild(gitSocial);
+	gitLink.appendChild(gitSocial);
+	socialIcons.appendChild(gitLink);
 
+	const linkedLink = document.createElement("a");
+	linkedLink.href = "https://www.linkedin.com/in/shahir47/";
+	linkedLink.target = "_blank";
+	linkedLink.rel = "noopener noreferrer";
 	const linked = document.createElement("img");
 	linked.src = Linked;
 	linked.alt = "LinkedIn";
 	linked.classList.add("social-icon");
-	socialIcons.appendChild(linked);
+	linkedLink.appendChild(linked);
+	socialIcons.appendChild(linkedLink);
 
 	socialBlock.appendChild(socialTextDiv);
 	socialBlock.appendChild(socialIcons);
