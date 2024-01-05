@@ -101,12 +101,19 @@ function about() {
 	highlight.classList.add("highlight");
 	highlight.textContent = "Tools";
 
-	const highlightText = document.createTextNode(" I've worked with");
+	const and = document.createTextNode(" and");
+
+	const highlightText = document.createTextNode(" Technologies");
+	highlightText.classList.add("highlight");
+
+	const sentence = document.createTextNode(" I've worked with");
 
 	const text = document.createElement("p");
 	text.classList.add("text");
 	text.appendChild(highlight);
+	text.appendChild(and);
 	text.appendChild(highlightText);
+	text.appendChild(sentence);
 	secondDivText.appendChild(text);
 
 	const carouselContainer = document.createElement("div");
