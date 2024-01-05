@@ -48,9 +48,8 @@ function dynamicText() {
 }
 
 function HomePage() {
-	const mainContainer = document.createElement("div");
-	mainContainer.classList.add("main-container");
-	mainContainer.id = "home";
+	const mainContainer = document.querySelector(".main-container");
+	mainContainer.innerHTML = "";
 
 	const firstBlockHome = document.createElement("div");
 	firstBlockHome.classList.add("first-block-home");
@@ -218,10 +217,10 @@ function HomePage() {
 
 	secondBlockHome.appendChild(secondBlockTextContainer);
 	secondBlockHome.appendChild(socialBlock);
+
 	mainContainer.appendChild(secondBlockHome);
-	const content = document.querySelector("div#content");
-	content.appendChild(mainContainer);
 
 	dynamicText();
 }
+
 export default HomePage;

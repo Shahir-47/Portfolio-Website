@@ -129,6 +129,10 @@ function createFooter() {
 
 function setupPage() {
 	createNavBar();
+	const mainContainer = document.createElement("div");
+	mainContainer.classList.add("main-container");
+	document.querySelector("div#content").appendChild(mainContainer);
+	createFooter();
 	window.addEventListener("scroll", () => {
 		const navBar = document.querySelector(".nav-bar");
 		if (window.scrollY > 0) {
@@ -140,4 +144,3 @@ function setupPage() {
 }
 
 export default setupPage;
-export { createFooter };
