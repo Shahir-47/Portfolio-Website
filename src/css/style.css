@@ -267,6 +267,7 @@ div#content {
 	flex-direction: column;
 	padding: 0 3rem;
 	margin: 0 5rem;
+	gap: 5rem;
 }
 
 .second-block-text-container {
@@ -307,4 +308,55 @@ div#content {
 .sub-text {
 	font-weight: 600;
 	margin: 0;
+}
+
+.social-icons img {
+	width: 2rem;
+	height: auto;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 50%;
+}
+
+.social-icons img:hover {
+	filter: invert(1);
+	box-shadow: 0 4px 8px 0 rgba(79, 209, 197, 0.5);
+}
+
+.social-text-div {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.social-text-div h3 {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.social-text-div * {
+	margin: 0;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.social-sub-text {
+	font-size: 0.8rem;
+	font-weight: 550;
+}
+
+.social-block {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.social-sub-text span {
+	color: #4fd1c5;
 }

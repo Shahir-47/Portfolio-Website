@@ -3,6 +3,8 @@ import Typed from "typed.js";
 import Computer from "./img/computer.png";
 import Hand from "./img/hand.svg";
 import Hacker from "./img/hacker.svg";
+import GitSocial from "./img/gitSocial.svg";
+import Linked from "./img/linked.svg";
 
 function dynamicText() {
 	const typed = new Typed("#typed-text", {
@@ -162,7 +164,50 @@ function HomePage() {
 	hacker.alt = "Hacker";
 	secondBlockTextContainer.appendChild(hacker);
 
+	const socialBlock = document.createElement("div");
+	socialBlock.classList.add("social-block");
+
+	const socialTextDiv = document.createElement("div");
+	socialTextDiv.classList.add("social-text-div");
+
+	const socialText = document.createElement("h3");
+	socialText.textContent = "FIND ME ON";
+
+	const textBefore = document.createTextNode("Feel free to ");
+	const textAfter = document.createTextNode(" with me");
+
+	const spanContent = document.createElement("span");
+	spanContent.textContent = "connect";
+
+	const socialSubText = document.createElement("p");
+	socialSubText.classList.add("social-sub-text");
+	socialSubText.appendChild(textBefore);
+	socialSubText.appendChild(spanContent);
+	socialSubText.appendChild(textAfter);
+
+	socialTextDiv.appendChild(socialText);
+	socialTextDiv.appendChild(socialSubText);
+
+	const socialIcons = document.createElement("div");
+	socialIcons.classList.add("social-icons");
+
+	const gitSocial = document.createElement("img");
+	gitSocial.src = GitSocial;
+	gitSocial.alt = "GitHub";
+	gitSocial.classList.add("social-icon");
+	socialIcons.appendChild(gitSocial);
+
+	const linked = document.createElement("img");
+	linked.src = Linked;
+	linked.alt = "LinkedIn";
+	linked.classList.add("social-icon");
+	socialIcons.appendChild(linked);
+
+	socialBlock.appendChild(socialTextDiv);
+	socialBlock.appendChild(socialIcons);
+
 	secondBlockHome.appendChild(secondBlockTextContainer);
+	secondBlockHome.appendChild(socialBlock);
 	mainContainer.appendChild(secondBlockHome);
 	const content = document.querySelector("div#content");
 	content.appendChild(mainContainer);
