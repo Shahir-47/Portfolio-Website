@@ -1,13 +1,13 @@
 body {
 	color: #e0e0e0;
 	background-color: #000000;
-	background-image: url(../img/7.jpg);
+	background-image: url(../img/background.jpg);
 	background-size: contain !important;
 	background-repeat: no-repeat !important;
+	font-family: sans-serif;
 }
 
 div#content {
-	height: max(100vh, 100%); /* temporary */
 	min-height: 1000vh;
 	display: flex;
 	flex-direction: column;
@@ -29,11 +29,11 @@ div#content {
 .logo-box {
 	display: flex;
 	align-items: center;
-	gap: 1.5rem;
+	gap: 1rem;
 }
 
 .logo-box img {
-	width: 4rem;
+	width: 3rem;
 	height: auto;
 	cursor: pointer;
 }
@@ -73,8 +73,8 @@ div#content {
 }
 
 .logo-box a h1 {
-	font-size: 3rem;
-	font-weight: 700;
+	font-size: 2rem;
+	font-weight: 500;
 	cursor: pointer;
 	margin: 0;
 }
@@ -88,7 +88,7 @@ div#content {
 .nav-links a {
 	color: #e0e0e0;
 	font-size: 1.5rem;
-	font-weight: 900;
+	font-weight: 100;
 	text-decoration: none;
 }
 
@@ -96,19 +96,35 @@ div#content {
 	color: #ffffffff;
 }
 
-.nav-links a:hover:after {
+.nav-links .nav-box:hover {
+	cursor: pointer;
+}
+
+.nav-links .nav-box:hover a {
+	color: #ffffffff;
+}
+
+.nav-links .nav-box:hover img {
+	filter: brightness(3);
+}
+
+.nav-links .nav-box:hover:after {
 	width: 100%;
 }
 
-.nav-links a:after {
+.nav-links .nav-box {
+	position: relative;
+}
+
+.nav-links .nav-box:after {
 	background: #4fd1c5;
 	border-radius: 16px;
-	bottom: 1px;
+	bottom: -5px;
 	content: "";
 	display: block;
 	height: 5px;
 	left: 0;
-	position: relative;
+	position: absolute;
 	transition: all 0.3s ease-out 0s;
 	width: 0;
 	z-index: -1;
@@ -121,9 +137,11 @@ div#content {
 
 .first-block-home {
 	display: grid;
-	justify-content: center;
+	justify-items: center;
 	align-items: center;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	padding: 0 3rem;
+	gap: 1rem;
 }
 
 .text-container {
@@ -137,8 +155,12 @@ div#content {
 	gap: 1rem;
 }
 
+.image-container {
+	width: 75%;
+}
+
 .computer {
-	width: 50%;
+	width: 100%;
 	height: auto;
 }
 
@@ -146,4 +168,66 @@ div#content {
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;
+}
+
+.typed-text-container {
+	display: flex;
+	align-items: center;
+}
+
+.nav-box {
+	padding: 0.25rem 0rem;
+}
+
+.wave {
+	width: 2rem;
+	height: auto;
+	animation-name: wave-animation;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	transform-origin: 70% 70%;
+	display: inline-block;
+	filter: brightness(0.9);
+}
+
+@keyframes wave-animation {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(-10deg);
+	}
+	20% {
+		transform: rotate(12deg);
+	}
+	30% {
+		transform: rotate(-10deg);
+	}
+	40% {
+		transform: rotate(9deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.name {
+	font-size: 3rem;
+	font-weight: 700;
+	color: #4fd1c5;
+}
+
+.nav-box {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.nav-box img {
+	width: 2rem;
+	height: auto;
 }

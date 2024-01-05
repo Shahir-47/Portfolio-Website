@@ -1,5 +1,7 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import Typed from "typed.js";
 import Computer from "./img/computer.png";
+import Hand from "./img/hand.svg";
 
 function HomePage() {
 	const mainContainer = document.createElement("div");
@@ -19,30 +21,40 @@ function HomePage() {
 	firstTextContainer.classList.add("first-text-container");
 
 	const firstText = document.createElement("h3");
-	firstText.textContent = "Hello, I'm";
+	firstText.textContent = "Hi, There!";
 	firstTextContainer.appendChild(firstText);
 
-	const wave = document.createElement("span");
+	const wave = document.createElement("img");
 	wave.classList.add("wave");
-	wave.textContent = `👋`;
+	wave.src = Hand;
+	wave.alt = "Wave";
 	firstTextContainer.appendChild(wave);
 
 	const secondTextContainer = document.createElement("div");
 	secondTextContainer.classList.add("second-text-container");
 
 	const secondText = document.createElement("h5");
-	secondText.textContent = "Shahir Ahmed";
+	secondText.textContent = "I'm ";
+	const name = document.createElement("span");
+	name.textContent = "Shahir Ahmed";
+	name.classList.add("name");
+	secondText.appendChild(name);
 	secondTextContainer.appendChild(secondText);
 
 	subTextContainer.appendChild(firstTextContainer);
 	subTextContainer.appendChild(secondTextContainer);
 
+	const typedTextContainer = document.createElement("div");
+	typedTextContainer.classList.add("typed-text-container");
+
 	const typedText = document.createElement("p");
 	typedText.classList.add("typed-text");
 	typedText.id = "typed-text";
 
+	typedTextContainer.appendChild(typedText);
+
 	textContainer.appendChild(subTextContainer);
-	textContainer.appendChild(typedText);
+	textContainer.appendChild(typedTextContainer);
 
 	firstBlockHome.appendChild(textContainer);
 
@@ -61,6 +73,8 @@ function HomePage() {
 
 	const content = document.querySelector("div#content");
 	content.appendChild(mainContainer);
+
+	dynamicText();
 }
 
 function dynamicText() {
