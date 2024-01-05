@@ -3,6 +3,7 @@ import Home from "./img/home.svg";
 import About from "./img/about.svg";
 import Code from "./img/code.svg";
 import Doc from "./img/doc.svg";
+import GitHub from "./img/gitSocial.svg";
 
 function createNavBar() {
 	const bar = document.createElement("nav");
@@ -89,8 +90,54 @@ function createNavBar() {
 	content.appendChild(bar);
 }
 
+function createFooter() {
+	const footer = document.createElement("footer");
+	footer.classList.add("footer");
+
+	const gitHubProfile = document.createElement("a");
+	gitHubProfile.href = "https://github.com/Shahir-47";
+
+	const gitHubProfileImg = document.createElement("img");
+	gitHubProfileImg.src = GitHub;
+	gitHubProfileImg.alt = "gitHub Logo";
+
+	const gitHubProfileText = document.createElement("p");
+	const atSymbol = document.createElement("span");
+	atSymbol.classList.add("at-symbol");
+	atSymbol.textContent = "@";
+	const username = document.createElement("span");
+	username.textContent = "Shahir-47";
+	gitHubProfileText.appendChild(atSymbol);
+	gitHubProfileText.appendChild(username);
+
+	gitHubProfile.appendChild(gitHubProfileImg);
+	gitHubProfile.appendChild(gitHubProfileText);
+
+	const seperator = document.createElement("p");
+	seperator.textContent = "|";
+
+	const gitHubRepo = document.createElement("a");
+	gitHubRepo.href = "https://github.com/Shahir-47/Portfolio-Website";
+	gitHubRepo.textContent = "Source Code";
+
+	footer.appendChild(gitHubProfile);
+	footer.appendChild(seperator);
+	footer.appendChild(gitHubRepo);
+
+	document.querySelector("div#content").appendChild(footer);
+}
+
 function setupPage() {
 	createNavBar();
+	window.addEventListener("scroll", () => {
+		const navBar = document.querySelector(".nav-bar");
+		if (window.scrollY > 0) {
+			navBar.classList.add("nav-bar-scrolled");
+		} else {
+			navBar.classList.remove("nav-bar-scrolled");
+		}
+	});
 }
 
 export default setupPage;
+export { createFooter };

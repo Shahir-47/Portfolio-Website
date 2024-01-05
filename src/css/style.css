@@ -8,7 +8,6 @@ body {
 }
 
 div#content {
-	min-height: 1000vh;
 	display: flex;
 	flex-direction: column;
 }
@@ -24,6 +23,21 @@ div#content {
 	padding: 1.5rem 3rem;
 	transition: all 0.3s ease;
 	z-index: 999;
+	background-color: transparent; /* No background initially */
+	backdrop-filter: blur(0); /* No blur initially */
+	box-shadow:
+		0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.nav-bar-scrolled {
+	backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+	background-color: rgba(
+		79,
+		209,
+		197,
+		0.15
+	); /* RGBA color for translucent teal */
 }
 
 .logo-box {
@@ -359,4 +373,82 @@ div#content {
 
 .social-sub-text span {
 	color: #4fd1c5;
+}
+
+/* --------------------------------------- Footer ------------------------------------------------------- */
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	height: 2.5rem;
+	margin-top: 2rem;
+	padding: 0.25rem 3rem;
+	background-color: #4fd1c5;
+}
+
+footer a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-weight: 100;
+	color: #fafafa;
+}
+
+footer p {
+	margin: 0.5rem 0;
+}
+
+footer a:hover,
+footer a:active {
+	color: #fff;
+}
+
+footer a img {
+	border-radius: 50%;
+}
+
+footer a:hover img,
+footer a:active img {
+	filter: brightness(1.2);
+	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
+}
+
+.at-symbol {
+	font-weight: 900;
+}
+
+footer img {
+	width: 2rem;
+	height: auto;
+}
+
+/* Styles the scrollbar track */
+::-webkit-scrollbar-track {
+	background-color: #2c3e50; /* A darker shade for contrast */
+}
+
+/* Styles the scrollbar handle */
+::-webkit-scrollbar-thumb {
+	background-color: #4fd1c5; /* The color you provided for the handle */
+	border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* Styles the scrollbar itself (including the track) */
+::-webkit-scrollbar {
+	width: 12px; /* Adjust to the size you prefer */
+}
+
+/* Optional: styles the scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background-color: #3a9d9b; /* A slightly darker shade of the handle color for hover */
+}
+
+/* Firefox */
+html {
+	scrollbar-color: #4fd1c5 #2c3e50;
+	scrollbar-width: thin; /* You can use 'auto' or 'thin' */
 }
