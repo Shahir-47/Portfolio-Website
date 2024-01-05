@@ -91,6 +91,33 @@ function about() {
 	aboutContainer.appendChild(aboutMeDiv);
 	aboutPage.appendChild(aboutContainer);
 
+	const secondDiv = document.createElement("div");
+	secondDiv.classList.add("second-div");
+
+	const secondDivText = document.createElement("div");
+	secondDivText.classList.add("second-div-text");
+
+	const highlight = document.createElement("span");
+	highlight.classList.add("highlight");
+	highlight.textContent = "Tools";
+
+	const highlightText = document.createTextNode(" I've worked with");
+
+	const text = document.createElement("p");
+	text.classList.add("text");
+	text.appendChild(highlight);
+	text.appendChild(highlightText);
+	secondDivText.appendChild(text);
+
+	const carouselContainer = document.createElement("div");
+	carouselContainer.classList.add("carousel-container");
+
+	const carousel = document.createElement("div");
+	carousel.classList.add("carousel");
+
+	// lots of items. Build card here wth logo
+	const carouselItem = document.createElement("div");
+
 	const main = document.querySelector(".main-container");
 	main.innerHTML = "";
 	main.appendChild(aboutPage);
