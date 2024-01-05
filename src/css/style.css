@@ -173,6 +173,20 @@ div#content {
 .typed-text-container {
 	display: flex;
 	align-items: center;
+	font-size: 2rem;
+}
+
+#typed-text {
+	font-size: 2rem;
+	font-weight: 500;
+	color: #4fd1c5;
+}
+
+.typed-cursor {
+	font-size: 2rem;
+	font-weight: 500;
+	color: #4fd1c5;
+	animation: blink 0.7s infinite;
 }
 
 .nav-box {
@@ -230,4 +244,19 @@ div#content {
 .nav-box img {
 	width: 2rem;
 	height: auto;
+}
+
+.second-text-container h5 {
+	margin: 0;
+}
+
+.first-text-container h3 {
+	font-weight: 500;
+	font-size: 2rem;
+	margin: 0;
+}
+
+.second-text-container h5 {
+	font-size: 2rem;
+	font-weight: 500;
 }

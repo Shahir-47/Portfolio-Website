@@ -80,7 +80,22 @@ function HomePage() {
 function dynamicText() {
 	const typed = new Typed("#typed-text", {
 		// Strings to display
-		strings: ["Full Stack Developer", "MERN Stack Developer", "Creative Coder"],
+		strings: [
+			"Full Stack Developer",
+			"Creative Coder",
+			"Computer Science Student",
+			"Mathematics Student",
+			"Aspiring Software Developer",
+			"Emerging Full Stack Developer",
+			"Programming Enthusiast",
+			"Future Tech Professional",
+			"Student of Software Engineering",
+			"Coding Hobbyist",
+			"Software Engineer in Training",
+			"Software Engineer in the Making",
+			"Software Engineer in the Works",
+		],
+
 		// Speed settings
 		typeSpeed: 50,
 		backSpeed: 25,
