@@ -1,6 +1,110 @@
 import Shahir from "./img/shahir.PNG";
 import GitSocial from "./img/gitSocial.svg";
 import Linked from "./img/linked.svg";
+import Docker from "./img/docker.svg";
+import Sql from "./img/sql.svg";
+import Eclipse from "./img/eclipse.svg";
+import Lua from "./img/lua.svg";
+import Vue from "./img/vue.svg";
+import Cypress from "./img/cypress.svg";
+import Vscode from "./img/vscode.svg";
+import C from "./img/c.svg";
+import Npm from "./img/npm.svg";
+import Babel from "./img/babel.svg";
+import Prettier from "./img/prettier.svg";
+import Eslint from "./img/eslint.svg";
+import Webpack from "./img/webpack.svg";
+import Jest from "./img/jest.svg";
+import Git from "./img/git.svg";
+import Python from "./img/python.svg";
+import Java from "./img/java.svg";
+import Linux from "./img/linux.svg";
+import Html from "./img/html.svg";
+import Css from "./img/css.svg";
+import Js from "./img/js.svg";
+
+function createCarouselItem(image, title) {
+	const carouselItem = document.createElement("div");
+	carouselItem.classList.add("carousel-item");
+
+	const carouselImage = document.createElement("img");
+	carouselImage.src = image;
+	carouselImage.alt = title;
+	carouselImage.classList.add("carousel-image");
+
+	const carouselTitle = document.createElement("p");
+	carouselTitle.classList.add("carousel-title");
+	carouselTitle.textContent = title;
+
+	carouselItem.appendChild(carouselImage);
+	carouselItem.appendChild(carouselTitle);
+
+	return carouselItem;
+}
+
+// add buttons to the carousel and control the scrolling
+function buttons() {
+	const carousel = document.querySelector(".carousel");
+	const backBtn = document.querySelector(".back-btn");
+	const forwardBtn = document.querySelector(".forward-btn");
+	let isScrolling = false; // This variable will be used to indicate scrolling status
+	let scrollDirection = 0; // 0 for left, 1 for right
+	const scrollStep = 8; // This value controls the smoothness of the scroll
+
+	// smooth scroll animation
+	const animateScroll = () => {
+		// if scrolling is still in progress, then continue scrolling
+		if (!isScrolling) return;
+
+		// scroll by the scrollStep
+		const scrollDistance = scrollDirection === 0 ? -scrollStep : scrollStep;
+		carousel.scrollLeft += scrollDistance;
+
+		// if the scroll is not at the end, then continue scrolling
+		if (
+			(scrollDirection === 0 && carousel.scrollLeft > 0) ||
+			(scrollDirection === 1 &&
+				carousel.scrollLeft + carousel.offsetWidth < carousel.scrollWidth)
+		) {
+			// animate the scroll at 60 frames per second
+			requestAnimationFrame(animateScroll);
+		} else {
+			// otherwise, stop scrolling
+			isScrolling = false;
+		}
+	};
+
+	// scroll left when the back button is clicked
+	const scrollLeft = () => {
+		// if the scroll is not in progress, then start scrolling
+		if (!isScrolling) {
+			scrollDirection = 0; // 0 for left
+			isScrolling = true; // the scroll is in progress
+			animateScroll(); // start scrolling
+		}
+	};
+
+	// scroll right when the next button is clicked
+	const scrollRight = () => {
+		// if the scroll is not in progress, then start scrolling
+		if (!isScrolling) {
+			scrollDirection = 1; // 1 for right
+			isScrolling = true; // the scroll is in progress
+			animateScroll(); // start scrolling
+		}
+	};
+
+	// stop scrolling when the mouse leaves the button
+	const stopScroll = () => {
+		isScrolling = false; // the scroll is not in progress
+	};
+
+	// add event listeners to the buttons
+	backBtn.addEventListener("mouseenter", scrollLeft); // Scroll left on mouse enter
+	backBtn.addEventListener("mouseleave", stopScroll); // Stop scrolling on mouse leave
+	forwardBtn.addEventListener("mouseenter", scrollRight); // Scroll right on mouse enter
+	forwardBtn.addEventListener("mouseleave", stopScroll); // Stop scrolling on mouse leave
+}
 
 function about() {
 	const aboutPage = document.createElement("div");
@@ -103,7 +207,8 @@ function about() {
 
 	const and = document.createTextNode(" and");
 
-	const highlightText = document.createTextNode(" Technologies");
+	const highlightText = document.createElement("span");
+	highlightText.textContent = " Technologies";
 	highlightText.classList.add("highlight");
 
 	const sentence = document.createTextNode(" I've worked with");
@@ -115,19 +220,87 @@ function about() {
 	text.appendChild(highlightText);
 	text.appendChild(sentence);
 	secondDivText.appendChild(text);
+	secondDiv.appendChild(secondDivText);
 
 	const carouselContainer = document.createElement("div");
 	carouselContainer.classList.add("carousel-container");
 
+	const carouselDiv = document.createElement("div");
+	carouselDiv.classList.add("carousel-div");
+
+	const backBtn = document.createElement("button");
+	backBtn.classList.add("back-btn");
+	backBtn.textContent = "<";
+	carouselDiv.appendChild(backBtn);
+
 	const carousel = document.createElement("div");
 	carousel.classList.add("carousel");
 
-	// lots of items. Build card here wth logo
-	const carouselItem = document.createElement("div");
+	const carouselItems = document.createElement("div");
+	carouselItems.classList.add("carousel-items");
+
+	const carouselItem1 = createCarouselItem(Html, "HTML");
+	const carouselItem2 = createCarouselItem(Css, "CSS");
+	const carouselItem3 = createCarouselItem(Js, "JavaScript");
+	const carouselItem4 = createCarouselItem(Git, "Git");
+	const carouselItem5 = createCarouselItem(Npm, "NPM");
+	const carouselItem6 = createCarouselItem(Vscode, "VS Code");
+	const carouselItem7 = createCarouselItem(Docker, "Docker");
+	const carouselItem8 = createCarouselItem(Linux, "Linux");
+	const carouselItem9 = createCarouselItem(Python, "Python");
+	const carouselItem10 = createCarouselItem(Java, "Java");
+	const carouselItem11 = createCarouselItem(Sql, "SQL");
+	const carouselItem12 = createCarouselItem(Webpack, "Webpack");
+	const carouselItem13 = createCarouselItem(Vue, "Vue.js");
+	const carouselItem14 = createCarouselItem(Babel, "Babel");
+	const carouselItem15 = createCarouselItem(Jest, "Jest");
+	const carouselItem16 = createCarouselItem(Prettier, "Prettier");
+	const carouselItem17 = createCarouselItem(Eslint, "Eslint");
+	const carouselItem18 = createCarouselItem(Cypress, "Cypress");
+	const carouselItem19 = createCarouselItem(C, "C++");
+	const carouselItem20 = createCarouselItem(Lua, "Lua");
+	const carouselItem21 = createCarouselItem(Eclipse, "Eclipse");
+
+	carouselItems.appendChild(carouselItem1);
+	carouselItems.appendChild(carouselItem2);
+	carouselItems.appendChild(carouselItem3);
+	carouselItems.appendChild(carouselItem4);
+	carouselItems.appendChild(carouselItem5);
+	carouselItems.appendChild(carouselItem6);
+	carouselItems.appendChild(carouselItem7);
+	carouselItems.appendChild(carouselItem8);
+	carouselItems.appendChild(carouselItem9);
+	carouselItems.appendChild(carouselItem10);
+	carouselItems.appendChild(carouselItem11);
+	carouselItems.appendChild(carouselItem12);
+	carouselItems.appendChild(carouselItem13);
+	carouselItems.appendChild(carouselItem14);
+	carouselItems.appendChild(carouselItem15);
+	carouselItems.appendChild(carouselItem16);
+	carouselItems.appendChild(carouselItem17);
+	carouselItems.appendChild(carouselItem18);
+	carouselItems.appendChild(carouselItem19);
+	carouselItems.appendChild(carouselItem20);
+	carouselItems.appendChild(carouselItem21);
+
+	carousel.appendChild(carouselItems);
+	carouselDiv.appendChild(backBtn);
+	carouselDiv.appendChild(carousel);
+
+	const forwardBtn = document.createElement("button");
+	forwardBtn.classList.add("forward-btn");
+	forwardBtn.textContent = ">";
+	carouselDiv.appendChild(forwardBtn);
+
+	carouselContainer.appendChild(carouselDiv);
+	secondDiv.appendChild(carouselContainer);
+	aboutPage.appendChild(secondDiv);
 
 	const main = document.querySelector(".main-container");
 	main.innerHTML = "";
 	main.appendChild(aboutPage);
+
+	buttons();
 }
 
 export default about;
