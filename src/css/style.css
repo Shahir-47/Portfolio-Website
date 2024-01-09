@@ -671,6 +671,7 @@ html {
 
 .hamburger-menu {
 	display: none;
+	transform-origin: top;
 }
 
 .hamburger {
@@ -706,16 +707,23 @@ html {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
-		background-color: #000000;
+		background-color: #4fd1c5;
 		position: fixed;
-		top: 0;
 		left: 0;
 		right: 0;
-		bottom: 0;
 		z-index: 999;
 		animation: expand 500ms ease-in-out;
-		transform-origin: top;
+		margin-top: 2rem;
+		gap: 1rem;
+		padding-top: 1rem;
+		/* display: flex;
+		flex-direction: column;
+		position: absolute;
+		left: 0;
+		right: 0;
+		align-items: center;
+		margin-top: 2.5rem;
+		gap: 1rem; */
 	}
 
 	@keyframes expand {
@@ -730,5 +738,57 @@ html {
 		100% {
 			transform: scaleY(1);
 		}
+	}
+
+	.inactive {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: #4fd1c5;
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		animation: collapse 0.5s forwards;
+		margin-top: 2rem;
+		gap: 1rem;
+		padding-top: 1rem;
+	}
+
+	/* .inactive {
+		opacity: 0;
+		visibility: hidden;
+		transform: scaleY(0);
+		transition:
+			transform 0.5s,
+			opacity 0.5s,
+			visibility 0s 0s;
+	} */
+
+	@keyframes collapse {
+		0% {
+			transform: scaleY(1);
+		}
+		70% {
+			transform: scaleY(1.1);
+		}
+		100% {
+			transform: scaleY(0);
+			display: none;
+		}
+	}
+
+	.hamburger-menu a {
+		border-bottom: 2px solid #e0e0e0;
+		text-align: center;
+	}
+
+	.hamburger-menu a:nth-of-type(4) {
+		border-bottom: none;
+	}
+
+	.hamburger-menu a {
+		font-size: 2rem;
+		padding-bottom: 1rem;
 	}
 }

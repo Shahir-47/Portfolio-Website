@@ -173,6 +173,21 @@ function setupPage() {
 			navBar.classList.remove("nav-bar-scrolled");
 		}
 	});
+
+	// hamburger menu
+	const hamburger = document.querySelector(".hamburger");
+	const hamburgerMenu = document.querySelector(".hamburger-menu");
+	hamburger.addEventListener("click", () => {
+		if (hamburgerMenu.classList.contains("active")) {
+			hamburgerMenu.classList.remove("active");
+			hamburgerMenu.classList.add("inactive");
+		} else if (hamburgerMenu.classList.contains("inactive")) {
+			hamburgerMenu.classList.remove("inactive");
+			hamburgerMenu.classList.add("active");
+		} else {
+			hamburgerMenu.classList.add("active");
+		}
+	});
 }
 
 export default setupPage;
