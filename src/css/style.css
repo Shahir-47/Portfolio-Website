@@ -678,6 +678,44 @@ html {
 	display: none;
 }
 
+@media (max-width: 500px) {
+	.second-block-home {
+		margin: 0;
+	}
+
+	.logo-box img {
+		width: 2.5rem;
+		height: auto;
+	}
+
+	.logo-box a h1 {
+		font-size: 1.5rem;
+	}
+
+	div.hamburger-menu.inactive,
+	div.hamburger-menu.active {
+		margin-top: 1.2rem;
+	}
+
+	.main-container {
+		gap: 1rem;
+	}
+
+	.text-div {
+		gap: 1rem;
+	}
+
+	.text-div h3 {
+		font-size: 1.25rem;
+	}
+
+	.about-container {
+		gap: 0rem;
+	}
+
+	.about-me-div
+}
+
 @media (max-width: 870px) {
 	.hamburger {
 		display: block;
@@ -779,7 +817,7 @@ html {
 	}
 
 	.hamburger-menu a {
-		border-bottom: 2px solid #e0e0e0;
+		border-bottom: 1.5px solid #e0e0e0;
 		text-align: center;
 	}
 
@@ -788,7 +826,23 @@ html {
 	}
 
 	.hamburger-menu a {
+		font-size: 1.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+	.first-text-container h3 {
+		font-size: 1.5rem;
+	}
+
+	.name {
 		font-size: 2rem;
-		padding-bottom: 1rem;
+	}
+
+	#typed-text {
+		font-size: 1.5rem;
+	}
+
+	.second-block-text-container {
+		gap: 3rem;
 	}
 }

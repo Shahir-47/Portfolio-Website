@@ -14,7 +14,24 @@ const aboutLink = document.querySelector(".nav-box:nth-of-type(2)");
 const projectsLink = document.querySelector(".nav-box:nth-of-type(3)");
 const resumeLink = document.querySelector(".nav-box:nth-of-type(4)");
 
+const mobileHomeLink = document.querySelector(
+	".hamburger-menu > a:nth-of-type(1)",
+);
+const mobileAboutLink = document.querySelector(
+	".hamburger-menu > a:nth-of-type(2)",
+);
+const mobileProjectsLink = document.querySelector(
+	".hamburger-menu > a:nth-of-type(3)",
+);
+const mobileResumeLink = document.querySelector(
+	".hamburger-menu > a:nth-of-type(4)",
+);
+
 homeLink.addEventListener("click", () => {
+	HomePage();
+});
+
+mobileHomeLink.addEventListener("click", () => {
 	HomePage();
 });
 
@@ -22,11 +39,25 @@ aboutLink.addEventListener("click", () => {
 	about();
 });
 
+mobileAboutLink.addEventListener("click", () => {
+	about();
+});
+
 projectsLink.addEventListener("click", () => {
 	project();
 });
 
+mobileProjectsLink.addEventListener("click", () => {
+	project();
+});
+
 resumeLink.addEventListener("click", () => {
+	window.open(
+		"https://drive.google.com/file/d/1xCZSm4K3tc7_hqHhzIqQMs6E_Cz-6qUg/view?usp=sharing",
+	);
+});
+
+mobileResumeLink.addEventListener("click", () => {
 	window.open(
 		"https://drive.google.com/file/d/1xCZSm4K3tc7_hqHhzIqQMs6E_Cz-6qUg/view?usp=sharing",
 	);
