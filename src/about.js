@@ -102,8 +102,10 @@ function buttons() {
 	// add event listeners to the buttons
 	backBtn.addEventListener("mouseenter", scrollLeft); // Scroll left on mouse enter
 	backBtn.addEventListener("mouseleave", stopScroll); // Stop scrolling on mouse leave
+	backBtn.addEventListener("click", scrollLeft); // Scroll left on click
 	forwardBtn.addEventListener("mouseenter", scrollRight); // Scroll right on mouse enter
 	forwardBtn.addEventListener("mouseleave", stopScroll); // Stop scrolling on mouse leave
+	forwardBtn.addEventListener("click", scrollRight); // Scroll right on click
 }
 
 function about() {

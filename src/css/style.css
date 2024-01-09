@@ -713,7 +713,27 @@ html {
 		gap: 0rem;
 	}
 
-	.about-me-div
+	.about-me-div {
+		gap: 1rem;
+	}
+
+	.second-div-text p {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.second-div {
+		padding: 0rem;
+	}
+
+	.project-item {
+		grid-template-columns: 1fr;
+		gap: 0rem;
+	}
+
+	.project-link-div {
+		justify-content: center;
+	}
 }
 
 @media (max-width: 870px) {
