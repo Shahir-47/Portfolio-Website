@@ -12,7 +12,7 @@ HomePage();
 const homeLink = document.querySelector(".nav-box:nth-of-type(1)");
 const aboutLink = document.querySelector(".nav-box:nth-of-type(2)");
 const projectsLink = document.querySelector(".nav-box:nth-of-type(3)");
-// const resumeLink = document.querySelector(".nav-box:nth-of-type(4)");
+const resumeLink = document.querySelector(".nav-box:nth-of-type(4)");
 
 homeLink.addEventListener("click", () => {
 	HomePage();
@@ -24,4 +24,10 @@ aboutLink.addEventListener("click", () => {
 
 projectsLink.addEventListener("click", () => {
 	project();
+});
+
+resumeLink.addEventListener("click", () => {
+	window.open(
+		"https://drive.google.com/file/d/1xCZSm4K3tc7_hqHhzIqQMs6E_Cz-6qUg/view?usp=sharing",
+	);
 });

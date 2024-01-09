@@ -4,6 +4,7 @@ import About from "./img/about.svg";
 import Code from "./img/code.svg";
 import Doc from "./img/doc.svg";
 import GitHub from "./img/gitSocial.svg";
+import hamburgerImg from "./img/hamburger.svg";
 
 function createNavBar() {
 	const bar = document.createElement("nav");
@@ -24,6 +25,7 @@ function createNavBar() {
 	const logoLink2 = document.createElement("a");
 	logoLink2.appendChild(logoText);
 	logoBox.appendChild(logoLink2);
+
 	logContainer.appendChild(logoBox);
 
 	const navLinks = document.createElement("div");
@@ -82,6 +84,36 @@ function createNavBar() {
 	AboutIcon.alt = "resume";
 	AboutLinkbox.appendChild(AboutIcon);
 	navLinks.appendChild(AboutLinkbox);
+
+	// hamburger menu
+	const hamburger = document.createElement("div");
+	hamburger.classList.add("hamburger");
+	const hamburgerIcon = document.createElement("img");
+	hamburgerIcon.src = hamburgerImg;
+	hamburgerIcon.alt = "hamburger";
+	hamburger.appendChild(hamburgerIcon);
+
+	const hamburgerMenu = document.createElement("div");
+	hamburgerMenu.classList.add("hamburger-menu");
+	const hamburgerMenuHome = document.createElement("a");
+	hamburgerMenuHome.href = "#";
+	hamburgerMenuHome.textContent = "Home";
+	hamburgerMenu.appendChild(hamburgerMenuHome);
+	const hamburgerMenuAbout = document.createElement("a");
+	hamburgerMenuAbout.href = "#";
+	hamburgerMenuAbout.textContent = "About";
+	hamburgerMenu.appendChild(hamburgerMenuAbout);
+	const hamburgerMenuProjects = document.createElement("a");
+	hamburgerMenuProjects.href = "#";
+	hamburgerMenuProjects.textContent = "Projects";
+	hamburgerMenu.appendChild(hamburgerMenuProjects);
+	const hamburgerMenuResume = document.createElement("a");
+	hamburgerMenuResume.href = "#";
+	hamburgerMenuResume.textContent = "Resume";
+	hamburgerMenu.appendChild(hamburgerMenuResume);
+
+	hamburger.appendChild(hamburgerMenu);
+	navLinks.appendChild(hamburger);
 
 	bar.appendChild(logContainer);
 	bar.appendChild(navLinks);

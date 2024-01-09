@@ -7,6 +7,7 @@ import GitSocial from "./img/gitSocial.svg";
 import Linked from "./img/linked.svg";
 
 function dynamicText() {
+	// eslint-disable-next-line no-unused-vars
 	const typed = new Typed("#typed-text", {
 		// Strings to display
 		strings: [
