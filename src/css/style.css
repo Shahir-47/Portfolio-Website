@@ -678,6 +678,62 @@ html {
 	display: none;
 }
 
+@media (max-width: 390px) {
+	.sub-text {
+		font-size: 0.9rem;
+	}
+
+	.footer a {
+		font-size: 1.1rem;
+	}
+
+	.first-text-container h3 {
+		font-size: 1.3rem;
+	}
+
+	.second-text-container h5 {
+		font-size: 1.3rem;
+	}
+
+	.name {
+		font-size: 1.5rem;
+	}
+
+	#typed-text {
+		font-size: 1.3rem;
+	}
+
+	.social-block {
+		gap: 1rem;
+	}
+
+	.second-block-home {
+		gap: 3rem;
+	}
+
+	.carousel {
+		padding-left: 0;
+	}
+
+	.carousel-items {
+		gap: 1rem;
+	}
+
+	.carousel-item {
+		min-width: 4.5rem;
+		min-height: 6rem;
+	}
+
+	.carousel-item img {
+		width: 2rem;
+		height: auto;
+	}
+
+	.carousel-item p {
+		font-size: 1rem;
+	}
+}
+
 @media (max-width: 500px) {
 	.second-block-home {
 		margin: 0;
