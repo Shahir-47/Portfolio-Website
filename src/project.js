@@ -45,6 +45,7 @@ function createProjectItem(image, title, description, liveDemo, sourceCode) {
 	return projectItem;
 }
 
+// loads the project page
 function project() {
 	const projectDiv = document.createElement("div");
 	projectDiv.classList.add("project-div");

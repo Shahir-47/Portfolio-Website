@@ -108,6 +108,7 @@ function buttons() {
 	forwardBtn.addEventListener("click", scrollRight); // Scroll right on click
 }
 
+// create the about page
 function about() {
 	const aboutPage = document.createElement("div");
 	aboutPage.classList.add("about-page");
@@ -302,7 +303,7 @@ function about() {
 	main.innerHTML = "";
 	main.appendChild(aboutPage);
 
-	buttons();
+	buttons(); // add buttons to the carousel and control the scrolling
 }
 
 export default about;

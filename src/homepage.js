@@ -6,6 +6,7 @@ import Hacker from "./img/hacker.svg";
 import GitSocial from "./img/gitSocial.svg";
 import Linked from "./img/linked.svg";
 
+// Type.js to write dynamically changing text
 function dynamicText() {
 	// eslint-disable-next-line no-unused-vars
 	const typed = new Typed("#typed-text", {
@@ -48,6 +49,7 @@ function dynamicText() {
 	});
 }
 
+// loads the home page
 function HomePage() {
 	const mainContainer = document.querySelector(".main-container");
 	mainContainer.innerHTML = "";
@@ -221,7 +223,7 @@ function HomePage() {
 
 	mainContainer.appendChild(secondBlockHome);
 
-	dynamicText();
+	dynamicText(); // Type.js
 }
 
 export default HomePage;

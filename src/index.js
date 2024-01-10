@@ -5,7 +5,7 @@ import HomePage from "./homepage";
 import about from "./about";
 import project from "./project";
 
-console.log("Test build");
+// sets up the header and footer and then loads the home page
 setupPage();
 HomePage();
 
@@ -14,6 +14,7 @@ const aboutLink = document.querySelector(".nav-box:nth-of-type(2)");
 const projectsLink = document.querySelector(".nav-box:nth-of-type(3)");
 const resumeLink = document.querySelector(".nav-box:nth-of-type(4)");
 
+// links if navbar switches to hamburger menu
 const mobileHomeLink = document.querySelector(
 	".hamburger-menu > a:nth-of-type(1)",
 );
@@ -27,11 +28,19 @@ const mobileResumeLink = document.querySelector(
 	".hamburger-menu > a:nth-of-type(4)",
 );
 
+// logo
+const logo = document.querySelector(".logo-box");
+
 homeLink.addEventListener("click", () => {
 	HomePage();
 });
 
 mobileHomeLink.addEventListener("click", () => {
+	HomePage();
+});
+
+// if clicked on logo, load home page
+logo.addEventListener("click", () => {
 	HomePage();
 });
 

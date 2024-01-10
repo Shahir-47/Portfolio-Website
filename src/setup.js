@@ -160,11 +160,13 @@ function createFooter() {
 }
 
 function setupPage() {
-	createNavBar();
+	createNavBar(); // creates the nav bar
+	// creates the main container
 	const mainContainer = document.createElement("div");
 	mainContainer.classList.add("main-container");
 	document.querySelector("div#content").appendChild(mainContainer);
-	createFooter();
+	createFooter(); // creates the footer
+	// add background color to the nav bar when scrolled
 	window.addEventListener("scroll", () => {
 		const navBar = document.querySelector(".nav-bar");
 		if (window.scrollY > 0) {
@@ -174,7 +176,7 @@ function setupPage() {
 		}
 	});
 
-	// hamburger menu
+	// activate hamburger menu on smaller screens
 	const hamburger = document.querySelector(".hamburger");
 	const hamburgerMenu = document.querySelector(".hamburger-menu");
 	hamburger.addEventListener("click", () => {
