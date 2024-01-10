@@ -912,6 +912,25 @@ html {
 		display: block;
 	}
 
+	.about-me-div {
+		display: block;
+	}
+
+	.about-me-picture {
+		display: block;
+		height: auto;
+	}
+
+	.about-me-picture {
+		float: left; /* Floats the image to the left */
+		max-width: 50%; /* Adjust the width as needed */
+		margin: 0 1rem 1rem 0; /* Adds margin around the image */
+	}
+
+	.about-me-text-div {
+		overflow: hidden; /* Clear the float */
+	}
+
 	.hamburger img {
 		width: 2rem;
 		height: auto;
