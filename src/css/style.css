@@ -382,7 +382,6 @@ footer {
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
-	height: 2.5rem;
 	margin-top: 2rem;
 	padding: 0.25rem 3rem;
 	background-color: #4fd1c5;
@@ -678,6 +677,108 @@ html {
 	display: none;
 }
 
+@media (max-width: 320px) {
+	.first-block-home {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+
+	div.second-div-text p {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 320px) {
+	div.second-block-text-container {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+
+	.about-me-div {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 355px) {
+	div.sub-text-container div.first-text-container h3 {
+		font-size: 1.2rem;
+	}
+
+	div.second-text-container h5 {
+		font-size: 1.1rem;
+	}
+
+	div.second-text-container h5 span.name {
+		font-size: 1.5rem;
+	}
+
+	img.wave {
+		width: 1.5rem;
+		height: auto;
+	}
+
+	div.logo-box img {
+		width: 2.75rem;
+		height: auto;
+	}
+
+	div.logo-box a h1 {
+		font-size: 1.5rem;
+	}
+
+	div.text-div h3 {
+		font-size: 1.3rem;
+	}
+
+	p.sub-text {
+		font-size: 0.8rem;
+	}
+
+	.social-text-div h3 {
+		font-size: 1.5rem;
+	}
+
+	footer {
+		padding: 0.25rem 0.5rem;
+	}
+
+	footer.footer a {
+		font-size: 1rem;
+	}
+
+	.nav-bar {
+		padding: 1rem 1.5rem;
+	}
+
+	div.about-text-container h1 {
+		font-size: 1.5rem;
+	}
+
+	.about-page {
+		padding: 0rem 1.5rem;
+	}
+
+	.about-me-text {
+		font-size: 1rem;
+	}
+
+	.project-div {
+		gap: 0rem;
+		padding: 0 1.5rem;
+	}
+
+	.project-div h1 {
+		font-size: 1.5rem;
+	}
+
+	.project-item-div p {
+		font-size: 1rem;
+	}
+
+	.project-link-div a {
+		font-size: 1rem;
+	}
+}
+
 @media (max-width: 390px) {
 	.sub-text {
 		font-size: 0.9rem;
@@ -687,7 +788,7 @@ html {
 		font-size: 1.1rem;
 	}
 
-	.first-text-container h3 {
+	div.first-text-container h3 {
 		font-size: 1.3rem;
 	}
 
@@ -695,8 +796,8 @@ html {
 		font-size: 1.3rem;
 	}
 
-	.name {
-		font-size: 1.5rem;
+	span.name {
+		font-size: 1.7rem;
 	}
 
 	#typed-text {
@@ -731,6 +832,20 @@ html {
 
 	.carousel-item p {
 		font-size: 1rem;
+	}
+
+	.first-block-home,
+	.second-block-home {
+		padding: 0 1.5rem;
+	}
+
+	span.typed-cursor,
+	p#typed-text {
+		font-size: 1.1rem;
+	}
+
+	.project-link-div a {
+		text-align: center;
 	}
 }
 
@@ -920,5 +1035,143 @@ html {
 
 	.second-block-text-container {
 		gap: 3rem;
+	}
+}
+
+@media (min-width: 2100px) {
+	.subdiv {
+		font-size: 1.3rem;
+	}
+
+	.about-me {
+		font-size: 3rem;
+	}
+
+	.paragraph {
+		font-size: 1.5rem;
+	}
+
+	p.social-sub-text {
+		font-size: 1.1rem;
+	}
+
+	p.about-me-text {
+		font-size: 1.5rem;
+	}
+
+	div.project-item-div p {
+		font-size: 1.5rem;
+	}
+
+	.sub-div {
+		font-size: 1.3rem;
+	}
+}
+
+@media (min-width: 2500px) {
+	div.paragraph {
+		font-size: 2rem;
+	}
+
+	div.paragraph p.about-me-text {
+		font-size: 2rem;
+	}
+
+	div.social-icons {
+		gap: 4rem;
+	}
+
+	div.second-div-text p {
+		font-size: 3rem;
+	}
+
+	.carousel-item {
+		padding: 0rem 0.5rem;
+	}
+
+	div.logo-box img {
+		width: 5rem;
+		height: auto;
+	}
+
+	div.logo-box {
+		gap: 2rem;
+	}
+
+	div.logo-box a h1 {
+		font-size: 2.5rem;
+	}
+
+	div.nav-box img {
+		width: 3rem;
+		height: auto;
+	}
+
+	div.nav-box {
+		gap: 1rem;
+	}
+
+	div.nav-links a {
+		font-size: 2rem;
+	}
+
+	div.project-div h1 {
+		font-size: 3rem;
+	}
+
+	div.project-item-div p {
+		font-size: 2rem;
+	}
+
+	div.project-link-div a {
+		font-size: 2rem;
+		border: 2px solid #4fd1c5;
+	}
+
+	div.social-text-div h3,
+	p#typed-text,
+	span.typed-cursor,
+	div.first-text-container h3 {
+		font-size: 3rem;
+	}
+
+	img.wave {
+		width: 3rem;
+		height: auto;
+	}
+
+	div.second-text-container h5 {
+		font-size: 2.5rem;
+	}
+
+	div.text-div h3 {
+		font-size: 2.9rem;
+	}
+
+	div.sub-div {
+		font-size: 1.7rem;
+	}
+
+	p.social-sub-text {
+		font-size: 1.5rem;
+	}
+
+	div.social-icons img {
+		width: 3.5rem;
+		height: auto;
+	}
+
+	footer.footer {
+		padding: 1rem 3rem;
+	}
+
+	footer.footer p,
+	footer.footer a {
+		font-size: 2rem;
+	}
+
+	footer.footer img {
+		width: 3rem;
+		height: auto;
 	}
 }
