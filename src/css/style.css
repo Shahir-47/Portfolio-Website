@@ -31,14 +31,7 @@ div#content {
 }
 
 .nav-bar-scrolled {
-	backdrop-filter: blur(10px); /* Adjust the blur value as needed */
-	-webkit-backdrop-filter: blur(10px);
-	background-color: rgba(
-		79,
-		209,
-		197,
-		0.15
-	); /* RGBA color for translucent teal */
+	background-color: #0b4d44;
 }
 
 .logo-box {
