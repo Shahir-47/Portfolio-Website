@@ -4,7 +4,7 @@ This repository is the codebase for my personal portfolio website, which serves 
 
 ## Live Website
 
-To get to know me and explore my work, visit: [Shahir's Portfolio](https://shahir-47.github.io/portfolio/)
+To get to know me and explore my work, visit: [Shahir's Portfolio](https://shahir-47.github.io/Portfolio-Website/)
 
 ## Table of Contents
 
