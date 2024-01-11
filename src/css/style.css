@@ -871,6 +871,12 @@ html {
 }
 
 @media (max-width: 500px) {
+	.back-btn,
+	.forward-btn {
+		font-size: 1.1rem;
+		padding: 0px 3px;
+	}
+
 	.about-me-div {
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		gap: 1rem;
@@ -934,12 +940,6 @@ html {
 }
 
 @media (max-width: 870px) {
-	.back-btn,
-	.forward-btn {
-		font-size: 1.5rem;
-		padding: 0rem 0.25rem;
-	}
-
 	.hamburger {
 		display: block;
 	}
