@@ -99,13 +99,37 @@ function buttons() {
 		isScrolling = false; // the scroll is not in progress
 	};
 
-	// add event listeners to the buttons
-	backBtn.addEventListener("mouseenter", scrollLeft); // Scroll left on mouse enter
-	backBtn.addEventListener("mouseleave", stopScroll); // Stop scrolling on mouse leave
-	backBtn.addEventListener("click", scrollLeft); // Scroll left on click
-	forwardBtn.addEventListener("mouseenter", scrollRight); // Scroll right on mouse enter
-	forwardBtn.addEventListener("mouseleave", stopScroll); // Stop scrolling on mouse leave
-	forwardBtn.addEventListener("click", scrollRight); // Scroll right on click
+	backBtn.addEventListener("mousedown", scrollLeft);
+	backBtn.addEventListener("mouseup", stopScroll);
+	forwardBtn.addEventListener("mousedown", scrollRight);
+	forwardBtn.addEventListener("mouseup", stopScroll);
+
+	backBtn.addEventListener("touchstart", scrollLeft);
+	backBtn.addEventListener("touchend", stopScroll);
+	forwardBtn.addEventListener("touchstart", scrollRight);
+	forwardBtn.addEventListener("touchend", stopScroll);
+
+	backBtn.addEventListener("mouseleave", stopScroll);
+	forwardBtn.addEventListener("mouseleave", stopScroll);
+	backBtn.addEventListener("touchcancel", stopScroll);
+	forwardBtn.addEventListener("touchcancel", stopScroll);
+
+	// Event listeners for keyboard
+	backBtn.addEventListener("keydown", (e) => {
+		if (e.keyCode === 37) {
+			// Left arrow key
+			scrollLeft();
+		}
+	});
+	backBtn.addEventListener("keyup", stopScroll);
+
+	forwardBtn.addEventListener("keydown", (e) => {
+		if (e.keyCode === 39) {
+			// Right arrow key
+			scrollRight();
+		}
+	});
+	forwardBtn.addEventListener("keyup", stopScroll);
 }
 
 // create the about page

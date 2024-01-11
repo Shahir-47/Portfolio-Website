@@ -541,6 +541,12 @@ html {
 	cursor: pointer;
 }
 
+.back-btn:hover,
+.forward-btn:hover {
+	color: #4fd1c5;
+	background-color: #ffffff;
+}
+
 .carousel {
 	display: flex;
 	overflow-x: auto;
