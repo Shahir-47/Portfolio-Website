@@ -936,6 +936,7 @@ html {
 	.back-btn,
 	.forward-btn {
 		font-size: 1.5rem;
+		padding: 0rem 0.25rem;
 	}
 
 	.hamburger {
