@@ -482,6 +482,7 @@ html {
 	order: 1;
 	width: 30%;
 	height: auto;
+	border-radius: 50%;
 }
 
 .about-me-text-div {
@@ -1227,7 +1228,7 @@ html {
 
 @media (min-width: 1128px) {
 	img.about-me-picture {
-		width: 100%;
+		width: 50%;
 		height: auto;
 	}
 }
