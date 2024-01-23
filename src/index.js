@@ -62,12 +62,12 @@ mobileProjectsLink.addEventListener("click", () => {
 
 resumeLink.addEventListener("click", () => {
 	window.open(
-		"https://drive.google.com/file/d/1TVE1Oby9Es6bRFjeTVHstWJvQX0bowEI/view?usp=sharing",
+		"https://drive.google.com/file/d/1YXAy4b7gfQIbTt0mnD-grfHBZKfvHVvz/view?usp=sharing",
 	);
 });
 
 mobileResumeLink.addEventListener("click", () => {
 	window.open(
-		"https://drive.google.com/file/d/1TVE1Oby9Es6bRFjeTVHstWJvQX0bowEI/view?usp=sharing",
+		"https://drive.google.com/file/d/1YXAy4b7gfQIbTt0mnD-grfHBZKfvHVvz/view?usp=sharing",
 	);
 });
