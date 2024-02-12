@@ -22,6 +22,7 @@ import Linux from "./img/linux.svg";
 import Html from "./img/html.svg";
 import Css from "./img/css.svg";
 import Js from "./img/js.svg";
+import Matlab from "./img/matlab.svg";
 
 function createCarouselItem(image, title) {
 	const carouselItem = document.createElement("div");
@@ -163,21 +164,21 @@ function about() {
 	const aboutMeText = document.createElement("p");
 	aboutMeText.classList.add("about-me-text");
 	aboutMeText.textContent =
-		"Hello, I'm Shahir, a dedicated Computer Science and Mathematics student at Dickinson College with a deep passion for web development. My academic and self-taught journey in programming has equipped me with the skills to craft efficient, scalable software solutions. I thrive on the challenges that come with developing clean, intuitive user interfaces and robust backend functionalities. My goal is to continuously expand my full-stack development expertise and contribute to meaningful projects in a dynamic team environment.";
+		"Hello! I'm Shahir, a dedicated Computer Science and Mathematics student at Dickinson College, where I'm mastering the art of full-stack development, with a keen eye on creating innovative web solutions. My academic journey is richly complemented by hands-on experience, especially noted during my transformative internship at 84 Lumber. There, I took the lead in modernizing technology by converting 50,000 lines of legacy code into contemporary and scalable Java and Python applications, showcasing my proficiency in these languages and my knack for efficient problem-solving.";
 
 	const aboutMeText2 = document.createElement("p");
 	aboutMeText2.classList.add("about-me-text");
-	aboutMeText2.textContent = `When I step away from the keyboard, you'll find me indulging in a variety of interests that keep me balanced and inspired. I'm an avid soccer fan, with Real Madrid's games punctuating the calendar of my personal life. In the world of mixed martial arts, I admire the strategic prowess of fighters like the retired Khabib Nurmagomedov. My taste in entertainment ranges from the captivating narratives of "The Shawshank Redemption" to the complex legal dramas of "Better Call Saul." Gaming is another passion — immersing myself in rich, story-driven worlds like those of Red Dead Redemption 2, LA Noire, and Sleeping Dogs provides not just recreation, but creative inspiration.`;
+	aboutMeText2.textContent = `My commitment to tech excellence is demonstrated through a series of challenging projects. I've dedicated myself to developing a variety of applications, from interactive games to dynamic web applications, each serving as a platform for learning and applying new technologies and coding techniques. These projects, available in my active GitHub repository, highlight my dedication to coding excellence and my passion for exploring the boundaries of web and software development.`;
 
 	const aboutMeText3 = document.createElement("p");
 	aboutMeText3.classList.add("about-me-text");
 	aboutMeText3.textContent =
-		"In addition to my studies and hobbies, I serve as a Resident Advisor, a role that has refined my interpersonal skills and ability to foster community among diverse groups. It's a role that complements my technical aspirations by emphasizing empathy, leadership, and collaboration.";
+		"As I continue to evolve in this dynamic field, my goal is to leverage my skills in a professional setting where I can contribute to meaningful tech solutions and further hone my expertise. Whether working solo or as part of a team, I approach every project with a meticulous analytical mindset, constantly striving to exceed expectations and drive innovation in the tech space.";
 
 	const aboutMeText4 = document.createElement("p");
 	aboutMeText4.classList.add("about-me-text");
 	aboutMeText4.textContent =
-		"I'm excited to embark on the next stage of my career journey and am actively seeking internship opportunities that will leverage my technical skills and work ethic. If you're looking for someone who brings a combination of coding proficiency and a well-rounded perspective to your team, let's connect.";
+		"Let's connect to explore opportunities in web development, collaborate on exciting projects, or simply to exchange insights on the latest in technology!";
 
 	paragraph.appendChild(aboutMeText);
 	paragraph.appendChild(aboutMeText2);
@@ -287,6 +288,7 @@ function about() {
 	const carouselItem19 = createCarouselItem(C, "C++");
 	const carouselItem20 = createCarouselItem(Lua, "Lua");
 	const carouselItem21 = createCarouselItem(Eclipse, "Eclipse");
+	const carouselItem22 = createCarouselItem(Matlab, "Matlab");
 
 	carouselItems.appendChild(carouselItem1);
 	carouselItems.appendChild(carouselItem2);
@@ -309,6 +311,7 @@ function about() {
 	carouselItems.appendChild(carouselItem19);
 	carouselItems.appendChild(carouselItem20);
 	carouselItems.appendChild(carouselItem21);
+	carouselItems.appendChild(carouselItem22);
 
 	carousel.appendChild(carouselItems);
 	carouselDiv.appendChild(backBtn);
