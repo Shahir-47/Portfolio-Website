@@ -22,6 +22,7 @@ import Linux from "./img/linux.svg";
 import Html from "./img/html.svg";
 import Css from "./img/css.svg";
 import Js from "./img/js.svg";
+import Matlab from "./img/matlab.svg";
 
 function createCarouselItem(image, title) {
 	const carouselItem = document.createElement("div");
@@ -287,6 +288,7 @@ function about() {
 	const carouselItem19 = createCarouselItem(C, "C++");
 	const carouselItem20 = createCarouselItem(Lua, "Lua");
 	const carouselItem21 = createCarouselItem(Eclipse, "Eclipse");
+	const carouselItem22 = createCarouselItem(Matlab, "Matlab");
 
 	carouselItems.appendChild(carouselItem1);
 	carouselItems.appendChild(carouselItem2);
@@ -309,6 +311,7 @@ function about() {
 	carouselItems.appendChild(carouselItem19);
 	carouselItems.appendChild(carouselItem20);
 	carouselItems.appendChild(carouselItem21);
+	carouselItems.appendChild(carouselItem22);
 
 	carousel.appendChild(carouselItems);
 	carouselDiv.appendChild(backBtn);
